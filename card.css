@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+.header {
+    background: #807c7c;
+    color: white;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.9s;
+}
+
+.navbar a:hover {
+    color: rgb(0, 81, 255);
+}
+
+.header-buttons .btn {
+    background: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: darkblue;
+}
+
+section {
+    padding: 40px 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgb(12, 12, 12);
+}
+
+h2 {
+    color: #333;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: url('./card.img/Screenshot_20230608-132139_2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px;
+}
+
+
+.job {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: lightgray;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
