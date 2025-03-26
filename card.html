@@ -3,94 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Kelvin's Portfolio</title>
     <link rel="stylesheet" href="card.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <header class="header">
-        <h1>KELVIN IGWE</h1>
-        <p>Frontend Developer </p>
+
+    <header>
         <nav class="navbar">
-            <ul>
+            <h1 class="logo">Kelvin Igwe</h1>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class='bx bx-menu'></i>  <!-- This is the menu icon -->
+            </div>
         </nav>
-        <div class="header-buttons">
-            <a href="resume.pdf" class="btn">Download Resume</a>
-            <a href="#" class="btn">LinkedIn</a>
-        </div>
     </header>
+        
+    <section class="hero">
+        <img src="card.img/folio.jpg" alt="Kelvin Igwe" class="hero-image">
+        <div class="folio.jpg"></div>
+        <h2>Hello, my name is <span>Kelvin</span></h2>
+        <p>I'm a Web Developer</p>
+
+        <div class="dropdown">
+            <div class="dropdown">
+                <button class="dropbtn">Drop a Message</button>
+                <div class="dropdown-content">
+                    <a href="https://wa.link/899eyx" target="_blank"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                    <a href="https://www.facebook.com/your-profile" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a>
+                    <a href="https://twitter.com/your-profile" target="_blank"><i class='bx bxl-twitter'></i> X (Twitter)</a>
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
 
     <section id="about">
-        <div class="profile-pic"></div>
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate frontend developer with a focus on design and user experience.</p>
-    </section>
-
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="job">
-            <h3>Frontend Developer - LINUX HUB</h3>
-            <p>2025 - Present</p>
-            <p>Developed and maintained web applications, improving User experience.</p>
-        </div>
-        <div class="job">
-            <h3>Front end Developer - Presco tech hub</h3>
-            <p>2024 - 2025</p>
-            <p>Designed user interfaces and conducted usability testing.</p>
+        <h2 class="about-title">About Me</h2> <!-- Title outside the image box -->
+        <div class="about-content">
+            <p class="summary">
+                I am a passionate frontend developer with experience in HTML, CSS, JavaScript, and React. 
+                I create user-friendly, modern, and responsive websites.
+            </p>
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Responsive Web Design</li>
+            </ul>
         </div>
     </section>
+    
 
-
-    <section id="education">
-        <h2>Education</h2>
-        <p>Bachelor's Degree in Home Science - Ebonyi state University (2011 - 2015)</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML / CSS / JavaScript</li>
-            <li>React.js</li>
-            <li>Data Analyst</li>
-            <li>Problem-Solving</li>
-        </ul>
-    </section>
-
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A fully responsive portfolio built with HTML, CSS, and JavaScript.</p>
+        <section id="services">
+        <h2>My Services</h2>
+        <div class="services-container">
+            <div class="service-box" id="service1">Web Design</div>
+            <div class="service-box" id="service2">Data Analysis</div>
+            <div class="service-box" id="service3">SEO Optimization</div>
         </div>
-        <div class="project">
-            <h3>Task Manager App</h3>
-            <p>A React-based task management app with Firebase backend.</p>
-        </div>
+        
     </section>
 
-
+    
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Kelvin Igwe" required>
-            <input type="email" id="email" placeholder="izuchukwukelvin2019@gmail.com" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send</button>
         </form>
     </section>
 
-
-    <footer class="footer">
-        <p>&copy; kelvin Igwe. @2025 All Rights Reserved.</p>
+    <footer>
+        <p>&copy; 2025 Kelvin Igwe. All Rights Reserved.</p>
     </footer>
 
     <script src="card.js"></script>

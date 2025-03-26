@@ -1,14 +1,28 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+const aboutSection = document.getElementById("about");
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+// List of animations
+const animations = ["fadeInSlide", "scaleUp", "rotateEffect"];
+let animationIndex = 0;
 
-    if (name === "" || email === "" || message === "") {
-        alert("All fields are required!");
-        return;
-    }
+function changeAnimation() {
+    // Remove previous animation
+    aboutSection.style.animation = "none";
 
-    alert("Message sent successfully!");
-});
+    // Force reflow (restart animation)
+    void aboutSection.offsetWidth;
+
+    // Apply new animation
+    aboutSection.style.animation = `${animations[animationIndex]} 1s ease-out forwards`;
+
+    // Move to the next animation
+    animationIndex = (animationIndex + 1) % animations.length;
+}
+
+// Change animation every 5 seconds
+setInterval(changeAnimation, 5000);
+
+// Apply first animation
+changeAnimation();

@@ -1,122 +1,462 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    background: linear-gradient(120deg, #1e1e2f, #3a3a5f); /* Modern gradient background */
     text-align: center;
 }
 
-
-.header {
-    background: #807c7c;
-    color: white;
-    padding: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
+/* Navbar Styling */
+.navbar {
     display: flex;
-    justify-content: center;
-}
-
-.navbar li {
-    margin: 0 20px;
-}
-
-.navbar a {
-    text-decoration: none;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
     color: white;
-    font-weight: bold;
-    transition: color 0.9s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.navbar a:hover {
-    color: rgb(0, 81, 255);
+/* Logo on Left */
+.logo-container {
+    display: flex;
+    align-items: center;
+    
 }
 
-.header-buttons .btn {
-    background: blue;
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Navigation Links on Right */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px; /* Push links to right */
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
     color: white;
     padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: white;
+    color: #333;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Menu Icon for Small Screens */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 1000;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .nav-links.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+
+    .nav-links.show li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.profile-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 0.5px;  /* Adjust width */
+    height: 0.5rem; /* Adjust height */
+    border-radius: 50%; /* Keeps it circular */
+    background-image: url('card.img/folio\ 2.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px;
+    border: 2px solid white; /* Optional: Adds a thin border */
+}
+
+.hero {
+    margin-top: 80px;
+    padding: 50px 20px;
+}
+.hero h2 span {
+    color: blue;
+}
+
+.btn {
+    background: blue;
+    color: white;
+    padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
-    margin: 10px;
     display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: darkblue;
 }
 
-section {
-    padding: 40px 20px;
-    background: white;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgb(12, 12, 12);
-}
-
-h2 {
-    color: #333;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-image: url('./card.img/Screenshot_20230608-132139_2.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto 10px;
-}
-
-
-.job {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-
-ul {
+.skills-list {
     list-style: none;
     padding: 0;
 }
 
-li {
+.skills-list li {
     background: lightgray;
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.skills-list li:hover {
+    background: cyan;
 }
 
 
-form input, form textarea {
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateEffect {
+    from {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+/* About Me Section */
+#about {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* About Me Title */
+.about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Box containing background image & content */
+.about-content {
+    background: url("card.img/vv.img.jpg") no-repeat center center/cover;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    opacity: 0;
+    transform: scale(0.8) rotateX(90deg);
+    animation: fadeInScaleRotate 1.5s forwards ease-in-out;
+}
+
+/* Readability for text */
+.about-content p,
+.about-content h3,
+.about-content ul {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+/* 🔥 Dynamic Animations 🔥 */
+
+/* Fade-In Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale + Rotate Animation */
+@keyframes fadeInScaleRotate {
+    from { opacity: 0; transform: scale(0.8) rotateX(90deg); }
+    to { opacity: 1; transform: scale(1) rotateX(0); }
+}
+
+/* Default Service Box */
+.service-box {
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px gray;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out;
+}
+
+/* Add initial background images */
+#service1 { background-image: url('card.img/Izunna.jpeg'); }
+#service2 { background-image: url('card.img/place.image.jpg'); }
+#service3 { background-image: url('card.img/game.webp'); }
+
+/* Hover Effect */
+.service-box:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s, background 0.5s;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: scale(1.1); /* Slightly enlarges */
+}
+
+#contact {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+input, textarea {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
+    margin: 10px 0;
     border-radius: 5px;
+    border: 1px solid gray;
 }
 
 button {
     background: blue;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 18px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 button:hover {
     background: darkblue;
 }
 
-.footer {
-    background: #222;
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: black;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+#contact {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* Gradient Animation */
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Animation */
+@keyframes bgAnimation {
+    0% { background-position: left; }
+    50% { background-position: center; }
+    100% { background-position: right; }
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-modern-background.jpg') no-repeat center/cover;
+    opacity: 0.2;
+    z-index: -1;
+    animation: bgAnimation 10s infinite alternate ease-in-out;
+}
+
+/* Floating Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-icons i {
+    font-size: 30px;
+    color: cyan;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icons i:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: white;
+}
+
+/* Button Glow Effect */
+button {
+    background: cyan;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px cyan;
+    transform: scale(1.05);
 }
