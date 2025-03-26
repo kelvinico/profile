@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Kelvin Igwe</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class='bx bx-menu'></i>  <!-- This is the menu icon -->
+            </div>
+        </nav>
+    </header>
+        
+    <section class="hero">
+        <img src="card.img/folio.jpg" alt="Kelvin Igwe" class="hero-image">
+        <div class="folio.jpg"></div>
+        <h2>Hello, my name is <span>Kelvin</span></h2>
+        <p>I'm a Web Developer</p>
+
+        <div class="dropdown">
+            <div class="dropdown">
+                <button class="dropbtn">Drop a Message</button>
+                <div class="dropdown-content">
+                    <a href="https://wa.link/899eyx" target="_blank"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                    <a href="https://www.facebook.com/your-profile" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a>
+                    <a href="https://twitter.com/your-profile" target="_blank"><i class='bx bxl-twitter'></i> X (Twitter)</a>
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section id="about">
+        <h2 class="about-title">About Me</h2> <!-- Title outside the image box -->
+        <div class="about-content">
+            <p class="summary">
+                I am a passionate frontend developer with experience in HTML, CSS, JavaScript, and React. 
+                I create user-friendly, modern, and responsive websites.
+            </p>
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Responsive Web Design</li>
+            </ul>
+        </div>
+    </section>
+    
+
+        <section id="services">
+        <h2>My Services</h2>
+        <div class="services-container">
+            <div class="service-box" id="service1">Web Design</div>
+            <div class="service-box" id="service2">Data Analysis</div>
+            <div class="service-box" id="service3">SEO Optimization</div>
+        </div>
+        
+    </section>
+
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kelvin Igwe. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
