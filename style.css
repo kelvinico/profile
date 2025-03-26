@@ -132,7 +132,7 @@ body {
     width: 0.5px;  /* Adjust width */
     height: 0.5rem; /* Adjust height */
     border-radius: 50%; /* Keeps it circular */
-    background-image: url('card.img/folio\ 2.jpg'); /* Ensure correct path */
+    background-image: url('Images/folio.jpg'); /* Ensure correct path */
     background-size: cover;
     background-position: center;
     margin: 0 auto 10px;
@@ -250,7 +250,7 @@ body {
 
 /* Box containing background image & content */
 .about-content {
-    background: url("card.img/vv.img.jpg") no-repeat center center/cover;
+    background: url("Images/vv.img.jpg") no-repeat center center/cover;
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
